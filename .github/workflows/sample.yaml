@@ -11,8 +11,6 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v4
 
-    - name: List files
-      run:  ls -al
-
     - name: Run Docker Compose
+      working-directory: docker-node
       run:  docker compose up -d
